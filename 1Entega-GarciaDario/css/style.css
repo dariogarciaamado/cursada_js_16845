@@ -1,0 +1,1253 @@
+@charset "UTF-8";
+/*Base*/
+/*Reseteamos estilos*/
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Shadows+Into+Light&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  /*scroll suave*/
+  user-select: none;
+  /*impedimos que el usuario pueda copiar o seleccionar el texto*/
+}
+
+/*ESTILOS PARA EL FONDO DE LA PAGINA, EN ESTE CASO UNA IMAGEN*/
+body {
+  background-image: url(https://i.ibb.co/C9WspmH/background-destrellos2.png);
+  background-repeat: no-repeat;
+  /*no se repite la imagen*/
+  background-attachment: fixed;
+  /*la imagen queda fija de fondo*/
+  background-size: cover;
+  /*tamaño imagen automatico, se va ajustando para cubrir la pantalla*/
+}
+
+/*Mixins*/
+/*Fuentes para NavMenu, Titulos y Texto*/
+/*Tamaño de las imagenes*/
+/*Variables*/
+/*FUENTES*/
+/*Fuente de menuNav*/
+/*Fuente de titulos1*/
+/*Fuente de textos1*/
+/*TAMAÑO DE LINK DE MENU DE NAVEGACION*/
+/*TAMAÑO DE TITULOS DE SECCIONES QUE HACEMOS, QUIENES SOMOS*/
+/*TAMAÑO DE TITULOS DE SECCIONES QUE HACEMOS, QUIENES SOMOS PARA MOBILE*/
+/*TAMAÑO DE TEXTO DE SECCIONES QUE HACEMOS, QUIENES SOMOS*/
+/*TAMAÑO DE TEXTO DE SECCIONES QUE HACEMOS, QUIENES SOMOS PARA MOBILE*/
+/*Padding en comun de #queHacemos, #quienesSomos, #modelos */
+/*Color de fondo del menu, botones y recuadros, para armonia*/
+/*Partials*/
+/*ESTILOS MENU DE NAVEGACION*/
+#miMenuNav {
+  z-index: 2000;
+  background-color: #ebdef0 !important;
+  position: fixed;
+  /*Imagen Logo a la izquierda de la barra de navegacion*/
+  /*Texto/link del menu de navegacion*/
+}
+#miMenuNav .imgLogo {
+  width: 7rem;
+  height: auto;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 1vw;
+  animation: FXcorazon infinite 2s;
+  /*Comportamiento al pasar el mouse por arriba*/
+  /*Comportamiento al hacer clic*/
+  /*Efecto tipo corazon para el logo*/
+}
+#miMenuNav .imgLogo:hover {
+  animation: none;
+  transform: scale(1.1);
+}
+#miMenuNav .imgLogo:active {
+  filter: blur(2px);
+}
+@keyframes FXcorazon {
+  30% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+#miMenuNav .menuNavText {
+  /*Comportamiento al pasar el mouse por arriba*/
+}
+#miMenuNav .menuNavText a, #miMenuNav .menuNavText p {
+  /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+  color: black;
+  /*color de letra*/
+  font-family: "Montserrat", sans-serif;
+  /*fuente*/
+  font-size: 1.1rem;
+  /*tamaño fuente*/
+  font-weight: bold;
+  /*tipo de letra, comun, negrita etc*/
+  font-style: normal;
+  /*estilo*/
+  text-decoration: none;
+  /*decoracion, por ejemplo subrayado*/
+  text-transform: uppercase;
+  /*transformacion, mayusculas, minuscuas, etc*/
+  text-align: center;
+  /*alineacion de texto*/
+  line-height: 1rem;
+  /*separacion entre lineas*/
+  word-spacing: 0.1rem;
+  /*separacion de palabras*/
+  /*Comportamiento al pasar el mouse por arriba*/
+}
+@media only screen and (min-width: 990px) and (max-width: 1140px) {
+  #miMenuNav .menuNavText a, #miMenuNav .menuNavText p {
+    font-size: 1.4vw;
+    /*tamaño fuente*/
+  }
+}
+@media only screen and (max-width: 990px) {
+  #miMenuNav .menuNavText a, #miMenuNav .menuNavText p {
+    font-size: 1rem;
+    /*tamaño fuente*/
+  }
+}
+#miMenuNav .menuNavText a:hover, #miMenuNav .menuNavText p:hover {
+  color: #fbc774 !important;
+  /*color de letra*/
+}
+#miMenuNav .menuNavText:hover {
+  transform: scale(1.05);
+}
+#miMenuNav .menuNavText:active {
+  filter: blur(2px);
+}
+#miMenuNav .menuSocial {
+  /*CUANDO SE VEA EN UNA TABLE O MOVIL LOS ICONOS DE REDES SOCIALES DESAPARECEN*/
+  /*DE EL MENU DE NAVEGACION*/
+  /*Iconos de redes sociales con link*/
+}
+@media only screen and (max-width: 990px) {
+  #miMenuNav .menuSocial {
+    display: none;
+  }
+}
+#miMenuNav .menuSocial .iconSocial {
+  width: 35px;
+  height: auto;
+  margin-top: 0;
+  margin-right: 0.05rem;
+  margin-bottom: 0;
+  margin-left: 0.05rem;
+  /*Comportamiento al pasar el mouse por arriba*/
+  /*Comportamiento al hacer clic*/
+}
+@media only screen and (max-width: 1170px) {
+  #miMenuNav .menuSocial .iconSocial {
+    width: 2.1vw;
+    height: auto;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+}
+#miMenuNav .menuSocial .iconSocial:hover {
+  transform: scale(1.1);
+}
+#miMenuNav .menuSocial .iconSocial:active {
+  filter: blur(2px);
+}
+
+/*FIN ESTILOS DE MENU DE NAVEGACION*/
+/*ESTILOS PARA BOTONES DE REDES SOCIALES QUE VAN A ESTAR ABAJO A LA DERECHA FIJO*/
+/*SOLO SE VAN A VER CUANDO LA PAGINA SE VEA EN UNA TABLET O MOVIL*/
+/*ICONO FACEBOOK*/
+.SocialMovilFb {
+  z-index: 7000;
+  display: scroll;
+  position: fixed;
+  right: 5px;
+  bottom: 70px;
+}
+.SocialMovilFb .iconSocialMovil {
+  width: 37px;
+  height: auto;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+@media only screen and (min-width: 990px) {
+  .SocialMovilFb {
+    display: none;
+  }
+}
+
+/*ICONO INSTAGRAM*/
+.SocialMovilIg {
+  z-index: 7000;
+  display: scroll;
+  position: fixed;
+  right: 5px;
+  bottom: 30px;
+}
+.SocialMovilIg .iconSocialMovil {
+  width: 37px;
+  height: auto;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+@media only screen and (min-width: 990px) {
+  .SocialMovilIg {
+    display: none;
+  }
+}
+
+/*ESTILOS DE PORTADA*/
+#portada {
+  padding: 50px 2vw 0 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+@media only screen and (max-height: 440px) {
+  #portada {
+    padding-top: 70px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #portada {
+    padding-top: 0px;
+  }
+}
+#portada div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#portada div .imgLogoPortada {
+  width: 90vh;
+  animation: aparecerI 3s;
+}
+@keyframes aparecerI {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  20% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+#portada div .imgTextoPortada {
+  width: 60vh;
+  animation: aparecerT 3s;
+  /*aparezca el texto del logo con animacion*/
+}
+@keyframes aparecerT {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/*FIN ESTILOS DE PORTADA*/
+/*ESTILOS SECCION QUE HACEMOS*/
+#queHacemos {
+  padding: 5rem 14px 1rem 14px;
+  /*se modifica en el _variables.scss*/
+  display: flex;
+  text-align: center;
+  /*Imagen superior al titulo*/
+  /*Titulos Que Hacemos*/
+  /*Texto Que Hacemos*/
+}
+#queHacemos .colorH {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #f4eff6;
+}
+#queHacemos img {
+  /*Ancho, alto y margenes de imagen*/
+  width: 20rem;
+  height: auto;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 2rem;
+  margin-left: 0;
+}
+@media only screen and (max-width: 990px) {
+  #queHacemos img {
+    width: 15rem;
+    height: auto;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    margin-left: 0;
+  }
+}
+#queHacemos .titulos1 {
+  /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+  color: black;
+  /*color de letra*/
+  font-family: "Montserrat", sans-serif;
+  /*fuente*/
+  font-size: 2rem;
+  /*tamaño fuente*/
+  font-weight: bold;
+  /*tipo de letra, comun, negrita etc*/
+  font-style: normal;
+  /*estilo*/
+  text-decoration: none;
+  /*decoracion, por ejemplo subrayado*/
+  text-transform: uppercase;
+  /*transformacion, mayusculas, minuscuas, etc*/
+  text-align: center;
+  /*alineacion de texto*/
+  line-height: 5rem;
+  /*separacion entre lineas*/
+  word-spacing: 0.05rem;
+  /*separacion de palabras*/
+}
+@media only screen and (max-width: 990px) {
+  #queHacemos .titulos1 {
+    /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+    color: black;
+    /*color de letra*/
+    font-family: "Montserrat", sans-serif;
+    /*fuente*/
+    font-size: 1.5rem;
+    /*tamaño fuente*/
+    font-weight: bold;
+    /*tipo de letra, comun, negrita etc*/
+    font-style: normal;
+    /*estilo*/
+    text-decoration: none;
+    /*decoracion, por ejemplo subrayado*/
+    text-transform: uppercase;
+    /*transformacion, mayusculas, minuscuas, etc*/
+    text-align: center;
+    /*alineacion de texto*/
+    line-height: 3rem;
+    /*separacion entre lineas*/
+    word-spacing: 0.03rem;
+    /*separacion de palabras*/
+  }
+}
+#queHacemos .textos1 {
+  /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+  color: black;
+  /*color de letra*/
+  font-family: "Montserrat", sans-serif;
+  /*fuente*/
+  font-size: 1.2rem;
+  /*tamaño fuente*/
+  font-weight: bold;
+  /*tipo de letra, comun, negrita etc*/
+  font-style: normal;
+  /*estilo*/
+  text-decoration: none;
+  /*decoracion, por ejemplo subrayado*/
+  text-transform: none;
+  /*transformacion, mayusculas, minuscuas, etc*/
+  text-align: center;
+  /*alineacion de texto*/
+  line-height: 2rem;
+  /*separacion entre lineas*/
+  word-spacing: 0.1rem;
+  /*separacion de palabras*/
+}
+@media only screen and (max-width: 990px) {
+  #queHacemos .textos1 {
+    /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+    color: black;
+    /*color de letra*/
+    font-family: "Montserrat", sans-serif;
+    /*fuente*/
+    font-size: 1rem;
+    /*tamaño fuente*/
+    font-weight: bold;
+    /*tipo de letra, comun, negrita etc*/
+    font-style: normal;
+    /*estilo*/
+    text-decoration: none;
+    /*decoracion, por ejemplo subrayado*/
+    text-transform: none;
+    /*transformacion, mayusculas, minuscuas, etc*/
+    text-align: center;
+    /*alineacion de texto*/
+    line-height: 1rem;
+    /*separacion entre lineas*/
+    word-spacing: 0.05rem;
+    /*separacion de palabras*/
+  }
+}
+
+/*ESTILOS PAGINAS QUIENES SOMOS*/
+#quienesSomos {
+  padding: 5rem 14px 1rem 14px;
+  /*se modifica en el _variables.scss*/
+  text-align: center;
+  height: 100%;
+  /*Titulos Que Hacemos*/
+  /*Texto Que Hacemos*/
+}
+#quienesSomos .titulos2 {
+  /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+  color: black;
+  /*color de letra*/
+  font-family: "Montserrat", sans-serif;
+  /*fuente*/
+  font-size: 2rem;
+  /*tamaño fuente*/
+  font-weight: bold;
+  /*tipo de letra, comun, negrita etc*/
+  font-style: normal;
+  /*estilo*/
+  text-decoration: none;
+  /*decoracion, por ejemplo subrayado*/
+  text-transform: uppercase;
+  /*transformacion, mayusculas, minuscuas, etc*/
+  text-align: center;
+  /*alineacion de texto*/
+  line-height: 5rem;
+  /*separacion entre lineas*/
+  word-spacing: 0.05rem;
+  /*separacion de palabras*/
+}
+@media only screen and (max-width: 990px) {
+  #quienesSomos .titulos2 {
+    /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+    color: black;
+    /*color de letra*/
+    font-family: "Montserrat", sans-serif;
+    /*fuente*/
+    font-size: 1.5rem;
+    /*tamaño fuente*/
+    font-weight: bold;
+    /*tipo de letra, comun, negrita etc*/
+    font-style: normal;
+    /*estilo*/
+    text-decoration: none;
+    /*decoracion, por ejemplo subrayado*/
+    text-transform: uppercase;
+    /*transformacion, mayusculas, minuscuas, etc*/
+    text-align: center;
+    /*alineacion de texto*/
+    line-height: 3rem;
+    /*separacion entre lineas*/
+    word-spacing: 0.03rem;
+    /*separacion de palabras*/
+  }
+}
+#quienesSomos .textos2 {
+  /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+  color: black;
+  /*color de letra*/
+  font-family: "Montserrat", sans-serif;
+  /*fuente*/
+  font-size: 1.2rem;
+  /*tamaño fuente*/
+  font-weight: bold;
+  /*tipo de letra, comun, negrita etc*/
+  font-style: normal;
+  /*estilo*/
+  text-decoration: none;
+  /*decoracion, por ejemplo subrayado*/
+  text-transform: none;
+  /*transformacion, mayusculas, minuscuas, etc*/
+  text-align: center;
+  /*alineacion de texto*/
+  line-height: 2rem;
+  /*separacion entre lineas*/
+  word-spacing: 0.1rem;
+  /*separacion de palabras*/
+}
+@media only screen and (max-width: 990px) {
+  #quienesSomos .textos2 {
+    /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+    color: black;
+    /*color de letra*/
+    font-family: "Montserrat", sans-serif;
+    /*fuente*/
+    font-size: 1rem;
+    /*tamaño fuente*/
+    font-weight: bold;
+    /*tipo de letra, comun, negrita etc*/
+    font-style: normal;
+    /*estilo*/
+    text-decoration: none;
+    /*decoracion, por ejemplo subrayado*/
+    text-transform: none;
+    /*transformacion, mayusculas, minuscuas, etc*/
+    text-align: center;
+    /*alineacion de texto*/
+    line-height: 2rem;
+    /*separacion entre lineas*/
+    word-spacing: 0.05rem;
+    /*separacion de palabras*/
+  }
+}
+#quienesSomos .imagen01 {
+  /*Ancho, alto y margenes de imagen*/
+  width: auto;
+  height: 25vw;
+  margin-top: 1rem;
+  margin-right: 0;
+  margin-bottom: 2rem;
+  margin-left: 0;
+}
+@media only screen and (max-width: 990px) {
+  #quienesSomos .imagen01 {
+    width: 90%;
+    height: auto;
+    margin-top: 0rem;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+}
+
+/*ESTILO PARA BARRAS DE ACCESO A DISEÑOS Y GALERIA INDEX.HTML*/
+#barras {
+  padding: 1rem 2vw;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 10%;
+  /*Mediaquery para pc*/
+  /*Mediaquery para el mobile*/
+}
+@media only screen and (min-width: 991px) {
+  #barras div {
+    /*esconde la imagen que es para versión mobile*/
+    /*Titulo Diseño*/
+  }
+  #barras div .modmob {
+    display: none;
+  }
+  #barras div h2 {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: opacity(0%);
+    transition: all 1s;
+    /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+    color: white;
+    /*color de letra*/
+    font-family: "Montserrat", sans-serif;
+    /*fuente*/
+    font-size: 2rem;
+    /*tamaño fuente*/
+    font-weight: bold;
+    /*tipo de letra, comun, negrita etc*/
+    font-style: normal;
+    /*estilo*/
+    text-decoration: none;
+    /*decoracion, por ejemplo subrayado*/
+    text-transform: uppercase;
+    /*transformacion, mayusculas, minuscuas, etc*/
+    text-align: center;
+    /*alineacion de texto*/
+    line-height: 5rem;
+    /*separacion entre lineas*/
+    word-spacing: 0.05rem;
+    /*separacion de palabras*/
+  }
+  #barras div .modweb {
+    filter: blur(0px) brightness(90%) drop-shadow(0 0 14px rgba(0, 0, 0, 0.7)) invert(5%);
+    transition: all 1s;
+    border-radius: 20px;
+  }
+  #barras:hover .modweb {
+    filter: blur(2px) brightness(30%) drop-shadow(0 0 4px rgba(0, 0, 0, 0.7));
+    transition: all 1s;
+    border-radius: 20px;
+  }
+  #barras:hover h2 {
+    filter: opacity(100%);
+    transition: all 1s;
+  }
+}
+@media only screen and (max-width: 990px) {
+  #barras div {
+    /*esconde la imagen que es para versión mobile*/
+    /*Titulo Diseño*/
+  }
+  #barras div .modweb {
+    display: none;
+  }
+  #barras div h2 {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: opacity(100%);
+    text-shadow: 0 0 10px #3b3b3b;
+    /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+    color: white;
+    /*color de letra*/
+    font-family: "Montserrat", sans-serif;
+    /*fuente*/
+    font-size: 4vw;
+    /*tamaño fuente*/
+    font-weight: 950;
+    /*tipo de letra, comun, negrita etc*/
+    font-style: normal;
+    /*estilo*/
+    text-decoration: none;
+    /*decoracion, por ejemplo subrayado*/
+    text-transform: uppercase;
+    /*transformacion, mayusculas, minuscuas, etc*/
+    text-align: center;
+    /*alineacion de texto*/
+    line-height: 3rem;
+    /*separacion entre lineas*/
+    word-spacing: 0.03rem;
+    /*separacion de palabras*/
+  }
+  #barras div .modmob {
+    filter: blur(0px) brightness(60%) drop-shadow(0 0 14px rgba(0, 0, 0, 0.7)) invert(5%);
+    border-radius: 20px;
+  }
+}
+
+/*FIN ESTILOS PARA SECCION DISEÑOS EN INDEX.HTML*/
+/*---------------------------------------------------------------------------------------------------*/
+/*ESTILOS PARA PAGINA DISEÑONS*/
+#galeriapage {
+  padding: 5rem 14px 1rem 14px;
+  align-items: center;
+  text-align: center;
+}
+#galeriapage .coldic {
+  margin-bottom: 2vw;
+}
+#galeriapage .coldic .imgdic {
+  width: 100%;
+  border-radius: 5px !important;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.7));
+}
+#galeriapage .disenoss .modal-dialog {
+  top: 9%;
+}
+@media only screen and (max-width: 990px) {
+  #galeriapage .disenoss .modal-dialog {
+    top: 13%;
+  }
+}
+#galeriapage .disenoss .modal-dialog .imgflot {
+  z-index: 4000;
+  width: 800px;
+  border-radius: 5px !important;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.7));
+}
+@media only screen and (max-width: 990px) {
+  #galeriapage .disenoss .modal-dialog .imgflot {
+    width: 95%;
+  }
+}
+
+#titulodisenos {
+  padding-top: 5rem;
+  align-items: center;
+  text-align: center;
+}
+#titulodisenos .titudic {
+  padding: 1rem 2rem 1rem 2rem;
+  background-color: #f4eff6;
+}
+#titulodisenos .titudic p {
+  /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+  color: black;
+  /*color de letra*/
+  font-family: "Montserrat", sans-serif;
+  /*fuente*/
+  font-size: 1.2rem;
+  /*tamaño fuente*/
+  font-weight: bold;
+  /*tipo de letra, comun, negrita etc*/
+  font-style: normal;
+  /*estilo*/
+  text-decoration: none;
+  /*decoracion, por ejemplo subrayado*/
+  text-transform: none;
+  /*transformacion, mayusculas, minuscuas, etc*/
+  text-align: center;
+  /*alineacion de texto*/
+  line-height: 2rem;
+  /*separacion entre lineas*/
+  word-spacing: 0.05rem;
+  /*separacion de palabras*/
+}
+@media only screen and (max-width: 990px) {
+  #titulodisenos .titudic p {
+    /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+    color: black;
+    /*color de letra*/
+    font-family: "Montserrat", sans-serif;
+    /*fuente*/
+    font-size: 1rem;
+    /*tamaño fuente*/
+    font-weight: bold;
+    /*tipo de letra, comun, negrita etc*/
+    font-style: normal;
+    /*estilo*/
+    text-decoration: none;
+    /*decoracion, por ejemplo subrayado*/
+    text-transform: none;
+    /*transformacion, mayusculas, minuscuas, etc*/
+    text-align: center;
+    /*alineacion de texto*/
+    line-height: 1rem;
+    /*separacion entre lineas*/
+    word-spacing: 0.03rem;
+    /*separacion de palabras*/
+  }
+}
+#titulodisenos .titudic p .botonLista {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fbc774 !important;
+  border-style: none !important;
+  color: black;
+}
+
+.listaTipografias img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+#disenospage {
+  width: 99%;
+  margin-top: 5rem;
+  align-items: center;
+  text-align: center;
+}
+#disenospage div {
+  align-items: center;
+  margin-bottom: 20px;
+}
+#disenospage div .disIzq .disImg {
+  width: 100%;
+}
+@media only screen and (max-width: 990px) {
+  #disenospage div .disIzq .disImg {
+    margin-bottom: 10px;
+    width: 80%;
+  }
+}
+#disenospage div .disDer {
+  /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+  color: black;
+  /*color de letra*/
+  font-family: "Montserrat", sans-serif;
+  /*fuente*/
+  font-size: 1.2rem;
+  /*tamaño fuente*/
+  font-weight: bold;
+  /*tipo de letra, comun, negrita etc*/
+  font-style: normal;
+  /*estilo*/
+  text-decoration: none;
+  /*decoracion, por ejemplo subrayado*/
+  text-transform: none;
+  /*transformacion, mayusculas, minuscuas, etc*/
+  text-align: center;
+  /*alineacion de texto*/
+  line-height: 1.5rem;
+  /*separacion entre lineas*/
+  word-spacing: 0.05rem;
+  /*separacion de palabras*/
+}
+@media only screen and (max-width: 990px) {
+  #disenospage div .disDer {
+    /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+    color: black;
+    /*color de letra*/
+    font-family: "Montserrat", sans-serif;
+    /*fuente*/
+    font-size: 1rem;
+    /*tamaño fuente*/
+    font-weight: bold;
+    /*tipo de letra, comun, negrita etc*/
+    font-style: normal;
+    /*estilo*/
+    text-decoration: none;
+    /*decoracion, por ejemplo subrayado*/
+    text-transform: none;
+    /*transformacion, mayusculas, minuscuas, etc*/
+    text-align: center;
+    /*alineacion de texto*/
+    line-height: 1rem;
+    /*separacion entre lineas*/
+    word-spacing: 0.03rem;
+    /*separacion de palabras*/
+  }
+}
+#disenospage div .disenosss {
+  z-index: 5000;
+}
+#disenospage div .disenosss .dice {
+  z-index: 4000;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+#disenospage div .disenosss .dice .imgFlota {
+  margin-top: 5rem;
+  width: 90%;
+}
+@media only screen and (max-width: 990px) {
+  #disenospage div .disenosss .dice .imgFlota {
+    width: 100%;
+  }
+}
+
+/*ESTILOS SECCION REALIZAR PEDIDO*/
+#pedido {
+  padding: 5rem 14px 1rem 14px;
+  /*se modifica en el _variables.scss*/
+  text-align: center;
+  /*Titulos PEDIDOS*/
+  /*Titulos Columnas*/
+  /*Texto PEDIDOS*/
+}
+#pedido .colorP {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #f4eff6;
+}
+#pedido .colPedido {
+  padding: 0 10px 0 10px;
+}
+#pedido .colPedido .botonContacto {
+  background-color: #fad498 !important;
+  border-style: none !important;
+  color: black !important;
+}
+#pedido .colPedido .contactoFondo {
+  background-color: #f4eff6 !important;
+}
+#pedido .colPedido .contactoIcon {
+  width: 40px;
+  /*Comportamiento al pasar el mouse por arriba*/
+  /*Comportamiento al hacer clic*/
+}
+#pedido .colPedido .contactoIcon:hover {
+  transform: scale(1.1);
+}
+#pedido .colPedido .contactoIcon:active {
+  filter: blur(2px);
+}
+#pedido .titulos3 {
+  /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+  color: black;
+  /*color de letra*/
+  font-family: "Montserrat", sans-serif;
+  /*fuente*/
+  font-size: 2rem;
+  /*tamaño fuente*/
+  font-weight: bold;
+  /*tipo de letra, comun, negrita etc*/
+  font-style: normal;
+  /*estilo*/
+  text-decoration: none;
+  /*decoracion, por ejemplo subrayado*/
+  text-transform: uppercase;
+  /*transformacion, mayusculas, minuscuas, etc*/
+  text-align: center;
+  /*alineacion de texto*/
+  line-height: 5rem;
+  /*separacion entre lineas*/
+  word-spacing: 0.05rem;
+  /*separacion de palabras*/
+}
+@media only screen and (max-width: 990px) {
+  #pedido .titulos3 {
+    /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+    color: black;
+    /*color de letra*/
+    font-family: "Montserrat", sans-serif;
+    /*fuente*/
+    font-size: 1.5rem;
+    /*tamaño fuente*/
+    font-weight: bold;
+    /*tipo de letra, comun, negrita etc*/
+    font-style: normal;
+    /*estilo*/
+    text-decoration: none;
+    /*decoracion, por ejemplo subrayado*/
+    text-transform: uppercase;
+    /*transformacion, mayusculas, minuscuas, etc*/
+    text-align: center;
+    /*alineacion de texto*/
+    line-height: 3rem;
+    /*separacion entre lineas*/
+    word-spacing: 0.03rem;
+    /*separacion de palabras*/
+  }
+}
+#pedido .colTitulos {
+  /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+  color: black;
+  /*color de letra*/
+  font-family: "Montserrat", sans-serif;
+  /*fuente*/
+  font-size: 1.5rem;
+  /*tamaño fuente*/
+  font-weight: bold;
+  /*tipo de letra, comun, negrita etc*/
+  font-style: normal;
+  /*estilo*/
+  text-decoration: none;
+  /*decoracion, por ejemplo subrayado*/
+  text-transform: uppercase;
+  /*transformacion, mayusculas, minuscuas, etc*/
+  text-align: center;
+  /*alineacion de texto*/
+  line-height: 5rem;
+  /*separacion entre lineas*/
+  word-spacing: 0.05rem;
+  /*separacion de palabras*/
+}
+@media only screen and (max-width: 990px) {
+  #pedido .colTitulos {
+    /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+    color: black;
+    /*color de letra*/
+    font-family: "Montserrat", sans-serif;
+    /*fuente*/
+    font-size: 1.2rem;
+    /*tamaño fuente*/
+    font-weight: bold;
+    /*tipo de letra, comun, negrita etc*/
+    font-style: normal;
+    /*estilo*/
+    text-decoration: none;
+    /*decoracion, por ejemplo subrayado*/
+    text-transform: uppercase;
+    /*transformacion, mayusculas, minuscuas, etc*/
+    text-align: center;
+    /*alineacion de texto*/
+    line-height: 3rem;
+    /*separacion entre lineas*/
+    word-spacing: 0.03rem;
+    /*separacion de palabras*/
+  }
+}
+#pedido .textos3, #pedido .botonContacto {
+  /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+  color: black;
+  /*color de letra*/
+  font-family: "Montserrat", sans-serif;
+  /*fuente*/
+  font-size: 1.2rem;
+  /*tamaño fuente*/
+  font-weight: bold;
+  /*tipo de letra, comun, negrita etc*/
+  font-style: normal;
+  /*estilo*/
+  text-decoration: none;
+  /*decoracion, por ejemplo subrayado*/
+  text-transform: none;
+  /*transformacion, mayusculas, minuscuas, etc*/
+  text-align: center;
+  /*alineacion de texto*/
+  line-height: 2rem;
+  /*separacion entre lineas*/
+  word-spacing: 0.1rem;
+  /*separacion de palabras*/
+}
+@media only screen and (max-width: 990px) {
+  #pedido .textos3, #pedido .botonContacto {
+    /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+    color: black;
+    /*color de letra*/
+    font-family: "Montserrat", sans-serif;
+    /*fuente*/
+    font-size: 1rem;
+    /*tamaño fuente*/
+    font-weight: bold;
+    /*tipo de letra, comun, negrita etc*/
+    font-style: normal;
+    /*estilo*/
+    text-decoration: none;
+    /*decoracion, por ejemplo subrayado*/
+    text-transform: none;
+    /*transformacion, mayusculas, minuscuas, etc*/
+    text-align: center;
+    /*alineacion de texto*/
+    line-height: 1rem;
+    /*separacion entre lineas*/
+    word-spacing: 0.05rem;
+    /*separacion de palabras*/
+  }
+}
+#pedido .textos3 a, #pedido .botonContacto a {
+  color: black;
+  text-decoration: none;
+}
+#pedido .sacarSeparacion {
+  line-height: 1rem;
+}
+
+.formularioContacto {
+  z-index: 3000;
+}
+.formularioContacto .contactoFondo {
+  background-color: #f4eff6 !important;
+}
+.formularioContacto .contactoFondo a {
+  text-decoration: none;
+  color: black;
+}
+.formularioContacto .contactoFondo img {
+  width: 40px;
+  /*Comportamiento al pasar el mouse por arriba*/
+  /*Comportamiento al hacer clic*/
+}
+.formularioContacto .contactoFondo img:hover {
+  transform: scale(1.1);
+}
+.formularioContacto .contactoFondo img:active {
+  filter: blur(2px);
+}
+.formularioContacto .contactoFondo .botContacto {
+  background-color: #fbc774 !important;
+  border-style: none !important;
+  color: black;
+}
+
+/*ESTILOS PARA EL FOOTER*/
+footer {
+  display: flex;
+  right: 0;
+  left: 0;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: space-between;
+  padding-top: 0.4%;
+}
+footer .ubicacion, footer .copyright, footer .designed {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+@media only screen and (max-width: 990px) {
+  footer .ubicacion, footer .designed {
+    display: none;
+  }
+}
+
+#finSocial {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 0 15% 0 15%;
+}
+#finSocial .colFinSocial .imgSocial {
+  width: 300px;
+}
+@media only screen and (max-width: 990px) {
+  #finSocial .colFinSocial .imgSocial {
+    width: 200px;
+  }
+}
+#finSocial .colFinSocial2 a {
+  /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+  color: black;
+  /*color de letra*/
+  font-family: "Montserrat", sans-serif;
+  /*fuente*/
+  font-size: 1.2rem;
+  /*tamaño fuente*/
+  font-weight: bold;
+  /*tipo de letra, comun, negrita etc*/
+  font-style: normal;
+  /*estilo*/
+  text-decoration: none;
+  /*decoracion, por ejemplo subrayado*/
+  text-transform: none;
+  /*transformacion, mayusculas, minuscuas, etc*/
+  text-align: center;
+  /*alineacion de texto*/
+  line-height: 2rem;
+  /*separacion entre lineas*/
+  word-spacing: 0.1rem;
+  /*separacion de palabras*/
+}
+@media only screen and (max-width: 990px) {
+  #finSocial .colFinSocial2 a {
+    /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+    color: black;
+    /*color de letra*/
+    font-family: "Montserrat", sans-serif;
+    /*fuente*/
+    font-size: 1rem;
+    /*tamaño fuente*/
+    font-weight: bold;
+    /*tipo de letra, comun, negrita etc*/
+    font-style: normal;
+    /*estilo*/
+    text-decoration: none;
+    /*decoracion, por ejemplo subrayado*/
+    text-transform: none;
+    /*transformacion, mayusculas, minuscuas, etc*/
+    text-align: center;
+    /*alineacion de texto*/
+    line-height: 1rem;
+    /*separacion entre lineas*/
+    word-spacing: 0.05rem;
+    /*separacion de palabras*/
+  }
+}
+#finSocial .colFinSocial2 h2 {
+  /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+  color: black;
+  /*color de letra*/
+  font-family: "Montserrat", sans-serif;
+  /*fuente*/
+  font-size: 1.5rem;
+  /*tamaño fuente*/
+  font-weight: bold;
+  /*tipo de letra, comun, negrita etc*/
+  font-style: normal;
+  /*estilo*/
+  text-decoration: none;
+  /*decoracion, por ejemplo subrayado*/
+  text-transform: uppercase;
+  /*transformacion, mayusculas, minuscuas, etc*/
+  text-align: center;
+  /*alineacion de texto*/
+  line-height: 3rem;
+  /*separacion entre lineas*/
+  word-spacing: 0.05rem;
+  /*separacion de palabras*/
+}
+@media only screen and (min-width: 990px) and (max-width: 1200px) {
+  #finSocial .colFinSocial2 h2 {
+    /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+    color: black;
+    /*color de letra*/
+    font-family: "Montserrat", sans-serif;
+    /*fuente*/
+    font-size: 1.5rem;
+    /*tamaño fuente*/
+    font-weight: bold;
+    /*tipo de letra, comun, negrita etc*/
+    font-style: normal;
+    /*estilo*/
+    text-decoration: none;
+    /*decoracion, por ejemplo subrayado*/
+    text-transform: uppercase;
+    /*transformacion, mayusculas, minuscuas, etc*/
+    text-align: center;
+    /*alineacion de texto*/
+    line-height: 2rem;
+    /*separacion entre lineas*/
+    word-spacing: 0.03rem;
+    /*separacion de palabras*/
+  }
+}
+@media only screen and (max-width: 990px) and (min-width: 500px) {
+  #finSocial .colFinSocial2 h2 {
+    /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+    color: black;
+    /*color de letra*/
+    font-family: "Montserrat", sans-serif;
+    /*fuente*/
+    font-size: 1.2rem;
+    /*tamaño fuente*/
+    font-weight: bold;
+    /*tipo de letra, comun, negrita etc*/
+    font-style: normal;
+    /*estilo*/
+    text-decoration: none;
+    /*decoracion, por ejemplo subrayado*/
+    text-transform: uppercase;
+    /*transformacion, mayusculas, minuscuas, etc*/
+    text-align: center;
+    /*alineacion de texto*/
+    line-height: 2rem;
+    /*separacion entre lineas*/
+    word-spacing: 0.05rem;
+    /*separacion de palabras*/
+  }
+}
+@media only screen and (max-width: 500px) {
+  #finSocial .colFinSocial2 h2 {
+    /*color letra, fuente, tamaño, tipo, estilo, decoracion, transformacion, alineacion, separacion de lineas, separacion de palabras*/
+    color: black;
+    /*color de letra*/
+    font-family: "Montserrat", sans-serif;
+    /*fuente*/
+    font-size: 1rem;
+    /*tamaño fuente*/
+    font-weight: bold;
+    /*tipo de letra, comun, negrita etc*/
+    font-style: normal;
+    /*estilo*/
+    text-decoration: none;
+    /*decoracion, por ejemplo subrayado*/
+    text-transform: uppercase;
+    /*transformacion, mayusculas, minuscuas, etc*/
+    text-align: center;
+    /*alineacion de texto*/
+    line-height: 1.5rem;
+    /*separacion entre lineas*/
+    word-spacing: 0.05rem;
+    /*separacion de palabras*/
+  }
+}
+#finSocial .colFinSocial2 .iconFinSocial {
+  width: 40px;
+  /*Comportamiento al pasar el mouse por arriba*/
+  /*Comportamiento al hacer clic*/
+}
+#finSocial .colFinSocial2 .iconFinSocial:hover {
+  transform: scale(1.1);
+}
+#finSocial .colFinSocial2 .iconFinSocial:active {
+  filter: blur(2px);
+}
+
+.espaciado {
+  margin-top: 10rem;
+}
+
+/*# sourceMappingURL=style.css.map */
